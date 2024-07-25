@@ -30,7 +30,7 @@ def creating():
     conn.close()
     return "Basketball Table Successfully Created"
 
-@app.route('./db_insert')
+@app.route('/db_insert')
 def inserting():
     conn = psycopg2.connect("postgresql://lab10_postgressql_tylerhopkins_user:FrS8NBHDF7zzcjwub4Q0gSgOA1mfHrjU@dpg-cqh5fliju9rs73egr270-a/lab10_postgressql_tylerhopkins")
     cur = conn.cursor()
@@ -46,7 +46,7 @@ def inserting():
     conn.close()
     return "Basketball Table Populated"
 
-@app.route('./db_select')
+@app.route('/db_select')
 def selecting():
     conn = psycopg2.connect("postgresql://lab10_postgressql_tylerhopkins_user:FrS8NBHDF7zzcjwub4Q0gSgOA1mfHrjU@dpg-cqh5fliju9rs73egr270-a/lab10_postgressql_tylerhopkins")
     cur = conn.cursor()
@@ -65,7 +65,7 @@ def selecting():
     response_string += "</table>"
     return response_string
 
-@app.route("./db_drop")
+@app.route("/db_drop")
 def dropping():
     conn = psycopg2.connect("postgresql://lab10_postgressql_tylerhopkins_user:FrS8NBHDF7zzcjwub4Q0gSgOA1mfHrjU@dpg-cqh5fliju9rs73egr270-a/lab10_postgressql_tylerhopkins")
     cur = conn.cursor()
